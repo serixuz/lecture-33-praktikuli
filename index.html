@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="user">
+      <div class="avatar">
+        <img id="avatar" src="" alt="User" />
+        <div class="status" id="status"></div>
+      </div>
+
+      <h2 id="name"></h2>
+      <p id="email"></p>
+      <p id="role"></p>
+    </div>
+
+    <script src="UserConfig.js"></script>
+    <script src="User.js"></script>
+
+    <script>
+      const user = new User(
+        'Giorgi',
+        'giorgi@gmail.com',
+        'https://i.pravatar.cc/150?img=12',
+        userConfig.role,
+        userConfig.loggedIn,
+      );
+
+      document.getElementById('name').textContent = user.name;
+      document.getElementById('email').textContent = user.email;
+      document.getElementById('role').textContent = user.getRole();
+      document.getElementById('avatar').src = user.avatar;
+
+      const status = document.getElementById('status');
+
+      if (user.checkLogin()) {
+        status.style.backgroundColor = 'green';
+      } else {
+        status.style.backgroundColor = 'red';
+      }
+    </script>
+  </body>
+</html>

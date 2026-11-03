@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #eee;
+}
+
+.user {
+  background: white;
+  width: 250px;
+  padding: 20px;
+  margin: 100px auto;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.avatar {
+  position: relative;
+  width: 100px;
+  margin: auto;
+}
+
+.avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.status {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 2px solid white;
+}
